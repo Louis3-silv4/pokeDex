@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  margin:0;
+  padding:0;
+}
+body{
+  min-height:100vh; 
+  display:flex;
+  flex-direction: column;
+  margin:0;
+}
+main{
+  width:100%;
+}
+@media (max-width: 778px) {
+  
+}
+.container-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width:100%;
+  padding: 20px;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 54%, rgba(23,23,121,1) 83%); 
+}
+.container-header img{
+  display: flex;
+  justify-content: center;
+  height:160px;
+  padding-right:50px
+}
+.nav-menu{
+  display: flex;
+  gap:20px
+}
+.nav-item {
+  font-weight: 600;
+  color: #fff;
+  display: flex;
+  margin-top: 55px;
+}
+.top-bar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background: rgb(217,217,217);
+  background: linear-gradient(124deg, rgba(217,217,217,1) 61%, rgba(50,50,149,1) 61%);  
+}
+.top-bar h2{
+  font-weight: 600;
+  color: #2F3133;
+  font-size:25px;
+  padding-left:40px;
+  margin-top:30px;  
+  margin-bottom:50px;
+}
+
+.search{
+  display:flex;
+  padding-right:100px;
+}
+
+.search input{
+ width:200px;
+ height:30px;
+}
+
+.search button{
+  width:30px;
+  height:30px;
+}
+
+.search img{
+  background-color: rgba(158, 185, 225, 0.1);
+  width:30px;
+}
+
+.favorite-container{
+  display: flex;
+  align-items:center;
+
+}
+
+.btn-favorite{
+  width:25px;
+  border:0;
+}
+
+.icon-favorite{
+  width:20px;
+
+}
+
+.pokemon-container{
+  display:flex;
+  flex-wrap:wrap;
+}
+
+.pokemon{
+  display:flex;
+  align-items:center;
+  flex-direction:row;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #757579;
+  border-top-left-radius: 73px;
+  border-bottom-left-radius: 34px;
+  border-top-right-radius: 33px;
+  border-bottom-right-radius: 70px;
+  color: #fff;
+  width: 30%; 
+  margin:20px;
+  padding:20px;
+  min-height: 70px;
+}
+.pokemon:hover{
+  background: rgb(217,217,217);
+  background: linear-gradient(124deg, rgba(217,217,217,1) 61%, rgba(50,50,149,1) 61%);  
+  transform: scale(1.06);
+}
+
+.img-container img {
+  width:25%;
+}
