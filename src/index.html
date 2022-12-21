@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Link CSS -->
-  <link rel="stylesheet" href="./styles/index.css">
+  <link rel="stylesheet" href="./styles/style.css">
   <title>Pokedex</title>
 </head>
 <body>
@@ -23,15 +23,24 @@
       <div class="container">
         <div class="top-bar">
           <h2> Escolha seu Pokémon</h2>
+          <div class="favorite-container">
+            <button class="btn-favorite" type="button">
+              <img class="icon-favorite" src="./assets/icons8-favorite-48.png" alt="Favorito">
+            </button>
+            <span alt="Pokemons favoritados" >Favoritos</span>
+          </div>
           <div class="search">
             <input type="text" placeholder="Procure seu pokémon" id="input-search">
-            <button type="button" class="btn-search" id="btn-search" disabled="">
+            <button type="submit" class="btn-search" id="btn-search" >
               <img src="./assets/lupa.svg" alt="Lupa">
             </button>
           </div>
         </div>
         <div id="pokemon-container" class="pokemon-container">
           
+        </div>
+        <div class="modal-container">
+
         </div>
       </div>
     </section>
