@@ -162,7 +162,7 @@ body{
   color:black;
 }
 
-/* .modal-container {
+.modal-container {
   display: none; 
   position: fixed;
   z-index: 1; 
@@ -175,5 +175,86 @@ body{
 }
 
 .modal{
+  background-color: rgba(211,211,211,0.9794511554621849);
+  margin: 15% auto; 
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  width: 65%; 
+  opacity:0.9;
 
-} */
+  display: flex;
+  flex-direction: column;
+}
+
+.modal .header{
+  display: flex;
+  justify-content:flex-start;
+  gap: 30px;
+
+  margin:5px;
+  padding:10px;
+
+  font-size: 50px;
+  font-weight: bold;
+  font-family: "Lucida Console", "Courier New", monospace;
+ 
+}
+
+.modal .Content {
+  margin: 35px ;
+  padding: 15px;
+  display: flex;
+  align-items:center;
+  font-family: "Lucida Console", "Courier New", monospace;
+
+}
+
+.modal .stats-left{
+  display: flex;
+  flex-direction:column;
+  gap:25px;
+  padding-left:50px;
+}
+
+.modal-img {
+  margin-left: 90px;
+  width:30%;
+
+}
+
+.modal .stats-right{
+  display:flex;
+  flex-direction:column;
+  margin-left:auto;
+  padding-right:85px;
+  gap:20px;
+}
+
+.modal .stat{
+  font-size:20px;
+  font-weight:600;
+  margin: 5px
+}
+
+.stat-desc {
+  background: #1eb800;
+  color: white;
+  border-radius: 15px;
+  padding: 5px 15px;
+  font-size:15px;
+  font-weight:bold;
+}
+
+progress {
+  border: 2px solid black;
+  height: 15px;
+}
+
+progress::-webkit-progress-bar {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+}
+
+progress::-webkit-progress-value {
+  background-color: #71c461
+}
