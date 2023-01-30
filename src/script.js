@@ -31,11 +31,12 @@ const detalharCard = (pokemon)=>{
 
   const modalHtml = `
   <div class="modal">
-    <div class="header">
+    <div class="modal-header">
       <div>#${id}</div>
       <div>${name}</div>
+      <div class="close-modal">X</div>
     </div>
-    <div class="Content">
+    <div class="modal-Content">
       <div class="stats-left">
         <div class="stat-row">
           <div class="stat">Type</div>
@@ -78,6 +79,14 @@ const detalharCard = (pokemon)=>{
 
   modalEl.innerHTML = modalHtml
   modalContainer.appendChild(modalEl)
+  modalEl.style.display = 'block';
+  modalEl.style.width = '100%';
+  modalEl.style.height = '100%';
+
+  const closeButton = modalEl.querySelector('.close-modal')
+  closeButton.addEventListener('click', () => {
+    modalEl.style.display = 'none'
+  })
 
   console.dir(pokemon)
 }
@@ -119,24 +128,29 @@ btnSearch.addEventListener('click', async () => {
   const pokemon = await res.json()
   
   const {name,sprites,id} = pokemon
+  if (searchTerm === " ") {
+    searchResults.innerHTML = `<div class="search-error"> Por favor, preencha o campo de busca </div>`
+  } else {
+    
+    searchResults.innerHTML = `
+      <div class='card'>
+      <div class='img-container'>
+      <img src='${sprites.other.home.front_default}' alt='${name}'/>
+      </div>
+      <div class='info'>
+      <div class='text-info'>
+      <span class='pokemon-id'>#${id}</span>
+      <h3 class='pokemon-name'>${name}</h3>
+      </div>
+      <div class='btn-info'>
+      <button onclick='detalharCard(${JSON.stringify(pokemon)})' class='btn-detalhar' id='btn-card-detalhar' alt='Para obter mais informações'>Detalhar</button>
+      <button onclick='favoriteCard()' class='btn-favorite-card' id='btn-card-favorite' alt='Favorite seu pokemon preferido'>Favorite</button>
+      </div>
+      </div>
+      </div>
+    `
+  }
   
-  searchResults.innerHTML = `
-  <div class='card'>
-  <div class='img-container'>
-  <img src='${sprites.other.home.front_default}' alt='${name}'/>
-  </div>
-  <div class='info'>
-  <div class='text-info'>
-  <span class='pokemon-id'>#${id}</span>
-  <h3 class='pokemon-name'>${name}</h3>
-  </div>
-  <div class='btn-info'>
-  <button type='button' class='btn-detalhar' id='btn-card-detalhar'>Detalhar</button>
-  <button type='button' class='btn-favorite-card' id='btn-card-favorite'>Favorite</button>
-  </div>
-  </div>
-  </div>
-  `
 });
 
 
