@@ -162,7 +162,7 @@ body{
   color:black;
 }
 
-.modal-container {
+/* .modal-container {
   display: none; 
   position: fixed;
   z-index: 1; 
@@ -172,6 +172,18 @@ body{
   height: 100%;
   overflow: auto;
   background-color: rgba(0,0,0,0.4);
+} */
+
+.pokemon-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
 .modal{
@@ -179,28 +191,29 @@ body{
   margin: 15% auto; 
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  width: 65%; 
+  width: 700px; 
+  height:400px;
   opacity:0.9;
 
   display: flex;
   flex-direction: column;
 }
 
-.modal .header{
+.modal-header{
   display: flex;
-  justify-content:flex-start;
-  gap: 30px;
+  justify-content:space-around;;
+  /* gap: 30px; */
 
   margin:5px;
   padding:10px;
 
-  font-size: 50px;
+  font-size: 45px;
   font-weight: bold;
   font-family: "Lucida Console", "Courier New", monospace;
  
 }
 
-.modal .Content {
+.modal-Content {
   margin: 35px ;
   padding: 15px;
   display: flex;
@@ -217,7 +230,7 @@ body{
 }
 
 .modal-img {
-  margin-left: 90px;
+  margin-left: 44px;
   width:30%;
 
 }
@@ -226,7 +239,7 @@ body{
   display:flex;
   flex-direction:column;
   margin-left:auto;
-  padding-right:85px;
+  padding-right: 34px;
   gap:20px;
 }
 
