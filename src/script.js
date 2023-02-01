@@ -2,6 +2,7 @@ const pokemonContainer = document.getElementById('pokemon-container');
 const inputSearch = document.getElementById('input-search');
 const btnSearch = document.getElementById('btn-search')
 const modalContainer = document.querySelector('#modal-container')
+const favoritos = document.getElementById('btn-favorite')
 
 const pokemonNumber = 30;
 
@@ -90,7 +91,56 @@ const detalharCard = (pokemon)=>{
 
   console.dir(pokemon)
 }
+favoritos.addEventListener('click',  () => {
+  const favorites = JSON.parse(localStorage.getItem('favorites'))
+  const favoriteHTML = favorites.map(pokemon=>{
+    const {name,sprites,id} = pokemon
+    return `
+    <div class='card'>
+      <div class='img-container'>
+        <img src='${sprites.other.home.front_default}' alt='Pokemon ${name}'/>
+      </div>
+      <div class='info'>
+        <div class='text-info'>
+          <span class='pokemon-id'>#${id}</span>
+          <h3 class='pokemon-name'>${name}</h3>
+        </div>
+        <div class='btn-info'>
+          <button onclick='detalharCard(${JSON.stringify(pokemon)})' class='btn-detalhar' id='btn-card-detalhar' alt='Para obter mais informações'>Detalhar</button>
+          <button onclick='unFavoriteCard(${JSON.stringify(pokemon)})' class='btn-favorite-card' id='btn-card-favorite' alt='Favorite seu pokemon preferido'>Desfavoritar</button>
+        </div>
+      </div>
+    </div>`
+    })
+    pokemonContainer.innerHTML = favoriteHTML.join('')
+});
 
+const isFavorite = (pokemonId) => {
+  const favorites = JSON.parse(localStorage.getItem('favorites'))
+  if (favorites) {
+    const result = favorites.findIndex((item) => item.id === pokemonId)
+    return result > -1
+  }
+  return false
+}
+
+const favoriteCard = (pokemon)=>{
+  if(isFavorite(pokemon.id)){
+    return alert(`${pokemon.name} já foi favoritado`)
+  }
+  const favorites = JSON.parse(localStorage.getItem('favorites')) || []
+  favorites.push(pokemon)
+  localStorage.setItem('favorites', JSON.stringify(favorites))
+
+}
+
+const unFavoriteCard = (index) => {
+  const favorites = JSON.parse(localStorage.getItem('favorites'))
+  if (favorites) {
+    favorites.splice(index, 1)
+    localStorage.setItem('favorites', JSON.stringify(favorites))
+  }
+}
 const pokemonCard = (pokemon) =>{
   const {name,sprites,id} = pokemon
 
@@ -109,7 +159,7 @@ const pokemonCard = (pokemon) =>{
       </div>
       <div class='btn-info'>
         <button onclick='detalharCard(${JSON.stringify(pokemon)})' class='btn-detalhar' id='btn-card-detalhar' alt='Para obter mais informações'>Detalhar</button>
-        <button onclick='favoriteCard()' class='btn-favorite-card' id='btn-card-favorite' alt='Favorite seu pokemon preferido'>Favorite</button>
+        <button onclick='favoriteCard(${JSON.stringify(pokemon)})' class='btn-favorite-card' id='btn-card-favorite' alt='Favorite seu pokemon preferido'>Favorite</button>
       </div>
     </div>
   </div>
@@ -144,13 +194,13 @@ btnSearch.addEventListener('click', async () => {
       </div>
       <div class='btn-info'>
       <button onclick='detalharCard(${JSON.stringify(pokemon)})' class='btn-detalhar' id='btn-card-detalhar' alt='Para obter mais informações'>Detalhar</button>
-      <button onclick='favoriteCard()' class='btn-favorite-card' id='btn-card-favorite' alt='Favorite seu pokemon preferido'>Favorite</button>
+      <button onclick='favoriteCard(${JSON.stringify(pokemon)})' class='btn-favorite-card' id='btn-card-favorite' alt='Favorite seu pokemon preferido'>Favorite</button>
       </div>
       </div>
       </div>
     `
   }
-  
+
 });
 
 
