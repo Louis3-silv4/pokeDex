@@ -76,7 +76,7 @@ const detalharCard = (pokemon)=>{
     </div>
   </div>
   `
-  
+
   modalEl.innerHTML = modalHtml
   modalContainer.appendChild(modalEl)
   modalEl.style.display = 'block';
@@ -104,9 +104,9 @@ favoritos.addEventListener('click',  () => {
           <span class='pokemon-id'>#${id}</span>
           <h3 class='pokemon-name'>${name}</h3>
         </div>
-        <div class='btn-info'>
+        <div class='btn-info-favoritos'>
           <button onclick='detalharCard(${JSON.stringify(pokemon)})' class='btn-detalhar' id='btn-card-detalhar' alt='Para obter mais informações'>Detalhar</button>
-          <button onclick='unFavoriteCard(${JSON.stringify(pokemon)})' class='btn-favorite-card' id='btn-card-favorite' alt='Favorite seu pokemon preferido'>Desfavoritar</button>
+          <button onclick='unFavoriteCard(${JSON.stringify(pokemon)})' class='btn-unfavorite-card' alt='Retire pokemon dos favoritos'>Desfavoritar</button>
         </div>
       </div>
     </div>`

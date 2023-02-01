@@ -191,6 +191,16 @@ body{
   width:55px;
   height:20px
 }
+.btn-info-favoritos{
+  display:flex;
+  padding: 30px 0 0 130px;
+  gap:10px;
+}
+.btn-unfavorite-card{
+  width: 83px;
+  height: 20px;
+  margin-right: 25px;
+}
 
 .card:hover{
   background: rgb(217,217,217);
