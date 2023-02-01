@@ -41,7 +41,7 @@ const detalharCard = (pokemon)=>{
       <div class="stats-left">
         <div class="stat-row">
           <div class="stat">Type</div>
-          <div class="stat-desc">${types[0].type.name}</div>
+          <div class=" stat-desc ${types[0].type.name}">${types[0].type.name}</div>
         </div>
         <div class="stat-row">
           <div class="stat">Peso</div>
@@ -57,27 +57,26 @@ const detalharCard = (pokemon)=>{
         <div class="stat-row">
           <div class="stat">HP</div>
           <div class="stat-bar">
-            <progress class="progress-bar" max="100" value="${stats[0].base_stat}"></progress>
+            <progress class="progress-bar ${types[0].type.name}" max="100" value="${stats[0].base_stat}"></progress>
           </div>
         </div>
         <div class="stat-row">
           <div class="stat">Attack</div>
           <div class="stat-bar">
-            <progress class="progress-bar" max="100" value="${stats[1].base_stat}"></progress>
+            <progress class="progress-bar ${types[0].type.name}" max="100" value="${stats[1].base_stat}"></progress>
           </div>
         </div>
         <div class="stat-row">
           <div class="stat">Defense</div>
           <div class="stat-bar">
-            <progress class="progress-bar" max="100" value="${stats[2].base_stat}"></progress>
+            <progress class="progress-bar ${types[0].type.name}" max="100" value="${stats[2].base_stat}"></progress>
           </div>
         </div>
       </div>
     </div>
   </div>
   `
-
-
+  
   modalEl.innerHTML = modalHtml
   modalContainer.appendChild(modalEl)
   modalEl.style.display = 'block';

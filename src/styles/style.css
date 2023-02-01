@@ -5,6 +5,43 @@
   padding:0;
 }
 
+
+.stat-row .bug, .stat-row progress.bug::-webkit-progress-value { background-color: #92bc2c}
+
+.stat-row .dark, .stat-row progress.dark::-webkit-progress-value  {  background-color: #595761;}
+
+.stat-row .dragon, .stat-row progress.dragon::-webkit-progress-value  {  background-color: #0c69c8;}
+  
+.stat-row .electric, .stat-row progress.electric::-webkit-progress-value  {  background-color: #f2d94e;}
+  
+.stat-row .fire, .stat-row progress.fire::-webkit-progress-value {  background-color: #fba54c;}
+  
+.stat-row .fairy, .stat-row progress.fairy::-webkit-progress-value  {  background-color: #ee90e6;}
+  
+.stat-row .fighting, .stat-row progress.fighting::-webkit-progress-value  {  background-color: #d3425f;}
+  
+.stat-row .flying, .stat-row progress.flying::-webkit-progress-value  {  background-color: #a1bbec;}
+  
+.stat-row .ghost, .stat-row progress.ghost::-webkit-progress-value  {  background-color: #5f6dbc;}
+  
+.stat-row .grass, .stat-row progress.grass::-webkit-progress-value  {  background-color: #5fbd58;}.
+  
+.stat-row .ground, .stat-row progress.ground::-webkit-progress-value  {  background-color: #da7c4d;}
+  
+.stat-row .ice, .stat-row progress.ice::-webkit-progress-value  {  background-color: #75d0c1;}
+  
+.stat-row .normal, .stat-row progress.normal::-webkit-progress-value {  background-color: #a0a29f;}
+  
+.stat-row .poison, .stat-row progress.poison::-webkit-progress-value {  background-color: #b763cf;}
+  
+.stat-row .psychic, .stat-row progress.psychic::-webkit-progress-value  {  background-color: #fa8581;}
+  
+.stat-row .rock, .stat-row progress.rock::-webkit-progress-value {  background-color: #c9bb8a;}
+  
+.stat-row .steel, .stat-row progress.steel::-webkit-progress-value {  background-color: #5695a3;}
+  
+.stat-row .water, .stat-row progress.water::-webkit-progress-value {  background-color: #539ddf;}
+
 body{
   display:flex;
   flex-direction: column;
@@ -162,18 +199,6 @@ body{
   color:black;
 }
 
-/* .modal-container {
-  display: none; 
-  position: fixed;
-  z-index: 1; 
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.4);
-} */
-
 .pokemon-modal {
   position: fixed;
   top: 0;
@@ -202,7 +227,6 @@ body{
 .modal-header{
   display: flex;
   justify-content:space-around;;
-  /* gap: 30px; */
 
   margin:5px;
   padding:10px;
@@ -266,8 +290,4 @@ progress {
 progress::-webkit-progress-bar {
   background-color: rgb(255, 255, 255);
   width: 100%;
-}
-
-progress::-webkit-progress-value {
-  background-color: #71c461
 }
