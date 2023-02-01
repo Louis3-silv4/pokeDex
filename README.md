@@ -4,4 +4,12 @@
 
 ## 🛠 Ferramentas utilizadas
 - Base de dados: [PokeApi](https://pokeapi.co/)
-- Bootstrap 
+- ### Tecnologias
+- HTML
+- CSS
+- javascript
+- ### Funcionalidades
+- Buscar pokemon 
+- Favoritar pokemon
+- Lista de favoritos(Local storage)
+- Modal com características 
