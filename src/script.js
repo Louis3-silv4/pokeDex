@@ -95,7 +95,7 @@ favoritos.addEventListener('click',  () => {
   const favoriteHTML = favorites.map(pokemon=>{
     const {name,sprites,id} = pokemon
     return `
-    <div class='card'>
+    <div class='card-favoritos'>
       <div class='img-container'>
         <img src='${sprites.other.home.front_default}' alt='Pokemon ${name}'/>
       </div>
