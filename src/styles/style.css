@@ -44,7 +44,7 @@ body{
   display:flex;
   flex-direction: column;
   min-width: 320px;
-  max-width: 1440px
+  max-width: 1440px;
 }
 
 .container-header {
@@ -326,7 +326,18 @@ progress::-webkit-progress-bar {
     padding: 30px 0 0 45px;
   }
 }
-
+@media (max-width: 1343px){
+  .pokemon-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:25px;
+    margin:40px;
+    padding:25px;
+  }
+  .card-favoritos{
+    width:450px;
+  }
+}
 @media (max-width: 1148px) {
   .card{
     width:320px;
@@ -347,7 +358,7 @@ progress::-webkit-progress-bar {
   }
 
 }
-@media (max-width:1023px){
+@media (max-width:1024px){
   .pokemon-container{
     display: grid;
     gap:50px;
@@ -427,5 +438,82 @@ progress::-webkit-progress-bar {
   }
   .btn-info-favoritos{
     padding: 19px 0 0 11px;
+  }
+}
+@media(max-width:735px){ 
+
+  .container-header{
+    justify-content: normal;
+    gap:35px;
+  }
+  .container-header img {
+    height:85px;
+  }
+  .nav-menu {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .top-bar h2 {
+    font-size: 20px;
+    padding-left: 11px;
+  }
+  .search{
+    padding-right: 80px;
+  }
+  .pokemon-container{
+    gap: 40px;
+    margin: 15px;
+    padding: 10px;
+  }
+
+}
+@media (max-width:706px){
+  .card-favoritos{
+    width: 278px;
+  }
+  .btn-info-favoritos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+    gap: 5px;
+    padding: 19px 0 0 10px;
+  }
+}
+@media (max-width: 695px){
+  body{
+    width:100vh
+  }
+  .favorite-container{
+    padding-right: 70px;
+  }
+}
+@media (max-width:425px){
+  .pokemon-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap:25px;
+    margin:40px;
+    padding:25px;
+    padding-left: 130px;
+  }
+  .card{
+    width:440px;
+  }
+  .card-favoritos{
+    width:440px;
+  }
+
+  .img-container img{
+    width:115px;
+  }
+  .btn-info{
+    flex-direction: row;
+    padding: 40px 0 0 79px;
+  }
+  .btn-info-favoritos{
+    flex-direction:row;
+    padding: 43px 0 0 60px;
   }
 }
