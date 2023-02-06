@@ -2,6 +2,10 @@
 
 💥 Encontre seu pokémon favorito, e veja suas principais características .
 
+![CapturaDeTela](src/assets/capturaDeTela.png)
+
+![CapturaDeModal](src/assets/capturaDeModal.png)
+
 ## 🛠 Ferramentas utilizadas
 - Base de dados: [PokeApi](https://pokeapi.co/)
 - ### Tecnologias
